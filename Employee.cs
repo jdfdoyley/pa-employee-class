@@ -33,21 +33,21 @@ public class Employee
         FirstName = firstName;
         LastName = lastName;
 
-        // Check if balance provided is greater that 0
-        // If it is, set the instance variables
-        // If not, leave the instance variable as the defaul 0.0
+        // Only set the Monthly Salary if the provided salary is greater than or
+        // equal to 1000
         if (monthlySalary >= 1000)
         {
             MonthlySalary = monthlySalary;
         }
     }
 
-    // Method to add an amount to the Monthly Salary, if it is valid
-    public void Employee(double amount)
+    // Only set the Monthly Salary if the provided salary is greater than or
+    // equal to 1000
+    public void UpdateSalary(double salary)
     {
-        if (amount >= 1000)
+        if (salary >= 1000)
         {
-            MonthlySalary = MonthlySalary + amount;
+            MonthlySalary += salary;
         }
     }
 }
